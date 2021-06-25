@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet,Picker } from 'react-native';
 import {Input} from './common';
-
-
+import PickerMarital from './common/picker';
 
 class Register extends Component {
+    
 state ={
     email:'',
     password:'',
@@ -33,7 +33,11 @@ state ={
                 <Input text='Age' inputPlaceHolder='Enter Age' 
                     onChangeText={(text) => { this.setState({ age: text }) }}
                     value={this.state.age} />
-                
+             
+                <View style={{flexDirection:'row',width:'100%',justifyContent:'space-around',alignItems:'center'}}>
+                    <Text style={{fontSize:17,marginRight:50}}>Marital Status</Text>
+                    <PickerMarital/>
+                </View>
                         
 
 
